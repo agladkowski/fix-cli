@@ -36,13 +36,13 @@ jobs:
     - name: Build with Gradle Wrapper
       run: ./gradlew shadowJar
     
-    #- name: Copy Jar file
-    #  run: mv build/libs/$(ls build/libs) app.jar
+    - name: Copy Jar file
+      run: mv build/libs/$(ls build/libs) app.jar
 
-    #- uses: actions/upload-artifact@master
-    #  with:
-    #    name: jar-file
-    #    path: app.jar
+    - uses: actions/upload-artifact@master
+      with:
+        name: jar-file
+        path: app.jar
 
     # NOTE: The Gradle Wrapper is the default and recommended way to run Gradle (https://docs.gradle.org/current/userguide/gradle_wrapper.html).
     # If your project does not have the Gradle Wrapper configured, you can use the following configuration to run Gradle with a specified version.
