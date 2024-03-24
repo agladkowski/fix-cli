@@ -1,5 +1,11 @@
 FROM openjdk:17-alpine
 RUN mkdir -p /app
-COPY ./build/libs/*.jar /app/fix-cli.jar
+
+# Local build
+# COPY ./build/libs/*.jar /app/app.jar
+
+# Github build
+COPY app.jar /app/app.jar
+
 WORKDIR /app
-ENTRYPOINT ["java","-jar","fix-cli.jar"]
+ENTRYPOINT ["java","-jar","app.jar"]

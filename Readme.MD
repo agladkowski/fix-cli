@@ -47,3 +47,6 @@ Options:
 ```
  docker run agladkowski/fix-cli  --host 127.0.0.1 --port 2345 --target Exchange -sender Broker1 -u TEST -p PWD
 ```
+
+## Github workflow
+https://medium.com/@thearaseng/using-github-actions-build-and-push-docker-images-30d05e58be4b
