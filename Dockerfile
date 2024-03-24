@@ -5,7 +5,7 @@ RUN mkdir -p /app
 # COPY ./build/libs/*.jar /app/app.jar
 
 # Github build
-COPY app.jar /app/app.jar
+COPY app.jar /app/
 
 WORKDIR /app
 ENTRYPOINT ["java","-jar","app.jar"]
